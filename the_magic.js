@@ -28,6 +28,7 @@ var makeHomeButtons = function()
 		button.setAttribute("id", BUTTON_LIST[i]);
 		button.setAttribute("class", "homebutton");
 		button.innerHTML = BUTTON_LIST[i];
+		document.getElementById("button div").appendChild(button);
 	}
 }
 
