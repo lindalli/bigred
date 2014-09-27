@@ -27,8 +27,11 @@ var makeHomeButtons = function()
 	document.body.appendChild(d);
 	for(var i = 0; i < NUM_BUTTONS; i++)
 	{
-		var button = document.createElement("BUTTON");
+		var button = document.createElement("A");
 		button.setAttribute("id", BUTTON_LIST[i]);
+		button.setAttribute("href", BUTTON_LIST[i] + "_page.html");
+		button.setAttribute("class", "btn btn-default btn-lg active");
+		button.setAttribute("role", "button");
 		var img = document.createElement("IMG");
 		img.src = "data/" + BUTTON_LIST[i] + ".png";
 		button.setAttribute("class", "homebutton");
@@ -39,7 +42,7 @@ var makeHomeButtons = function()
 
 //TODO do the following with some sort of loop
 $(document).ready(function() {
-    			$("button").click(function() { if($(this).attr('id') === FOOD)
+    			$(".bth btn-default btn-lg active").click(function() { if($(this).attr('id') === FOOD)
     			{
     				console.log(FOOD);
     			}
