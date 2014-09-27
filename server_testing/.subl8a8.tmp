@@ -1,0 +1,38 @@
+// we are specifying the html directory as another public directory
+var express = require('express');
+//var path = require('path');
+//server.set('views', __dirname);
+var server = express();
+server.use(express.static(__dirname + '/public'));
+server.set('views', './views'); //donish
+server.set('view engine', 'jade'); //done
+
+//server.use(express.static(__dirname, '/public'));
+
+//server.use(express.staticProvider(__dirname, '/public'));
+//server.engine('html', require('ejs').renderFile);
+
+
+
+//app.use(express.staticProvider(__dirname + '/public'));
+
+server.get('/', function(req, res){
+	res.render("index.jade");
+});
+
+
+/*
+server.engine('jade', require('jade').__express);
+
+server.get('/', function(req, res) {
+	res.render('index', {title: 'Hey', message: 'Hello there!'});
+});
+*/
+
+/*
+server.get('/food', function(req, res) {
+	res.render('../food_page.html');
+});*/
+
+//server.listen(1337);
+server.listen(1337, '127.0.0.1');
