@@ -5,12 +5,16 @@ console.log(xhr.statusText);
 console.log(xhr.response);
 var Json=xhr.reponse; //json object
 */
-fs = require('fs');
+//fs = require('fs');
 console.log("Hello world!!!!!");
-var Factual = require('C:/Users/Acer/node_modules/factual-api');
+var Factual = require('./node_modules/factual-api');
 var factual = new Factual('H6KtP8gAGRVJeHaiEukjKiMG16jv3edcYNqhwIFB', 'AUH3r8blzToAgObnpkpoJF4AUiZi4ZmKR9PB6SHd');
 
-var coffeShops = factual.get('/t/places-us', {q:"coffee"}, function (error, res) {
+var coffeeShops = factual.get('/t/places-us', {q:"coffee", geo:{"$circle":{"$center":[42.4496998, -76.48150509999999],"$meters":1000}}}, function (error, res) {
+  	console.log(res.data);
+});	
+/*
+factual.get('/t/places-us', {q:"coffee"}, function (error, res) {
   fs.writeFile("/tmp/test/foo.txt", res.data, function(err) {
     if(err) {
         console.log(err);
@@ -19,3 +23,4 @@ var coffeShops = factual.get('/t/places-us', {q:"coffee"}, function (error, res)
     }
 }); 
 });
+*/
