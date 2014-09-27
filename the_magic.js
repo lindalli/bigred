@@ -22,6 +22,9 @@ Array.prototype.foreach = function(f) {
 
 var makeHomeButtons = function()
 {
+	var d = document.createElement("DIV");
+	d.setAttribute("id", "buttondiv");
+	document.body.appendChild(d);
 	for(var i = 0; i < NUM_BUTTONS; i++)
 	{
 		var button = document.createElement("BUTTON");
@@ -30,10 +33,11 @@ var makeHomeButtons = function()
 		img.src = "data/" + BUTTON_LIST[i] + ".png";
 		button.setAttribute("class", "homebutton");
 		button.appendChild(img);
-		document.getElementById("button div").appendChild(button);
+		document.getElementById("buttondiv").appendChild(button);
 	}
 }
 
+//TODO do the following with some sort of loop
 $(document).ready(function() {
     			$("button").click(function() { if($(this).attr('id') === FOOD)
     			{
