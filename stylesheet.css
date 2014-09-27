@@ -9,15 +9,16 @@ body{
 }
 #banner{
 	position: center;
+  padding-top: 10px;
 	width: 700px;
-    height: 100px;
+  height: 100px;
 }
 #banner:hover{
 	text-shadow: 2px 2px #000000;
 }
 .homebutton{
 	position: relative;
-	top: 200px;
+	top: 50px;
 	display: inline-block;
 }
 .homebutton:hover{
