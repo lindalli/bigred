@@ -1,10 +1,11 @@
 var text = document.getElementById("location");
 var lat=0;
 var lon=0;
+
 function getLocation() {
     if (navigator.geolocation) {
     	console.log('in getLocation');
-        navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else { 
         text.innerHTML = "Geolocation is not supported by this browser. Please enter zip code.";
     }
@@ -43,6 +44,7 @@ function showError(error) {
     }
 }
 */
+
 function findAttractions(latitude, longitude) {
 	var Factual = require('./node_modules/factual-api');
 	var factual = new Factual('H6KtP8gAGRVJeHaiEukjKiMG16jv3edcYNqhwIFB', 'AUH3r8blzToAgObnpkpoJF4AUiZi4ZmKR9PB6SHd');
@@ -52,4 +54,9 @@ function findAttractions(latitude, longitude) {
 	});	
 }
 
-getLocation();
+function getCoordinates() {
+	getLocation();
+	return [lat, lon];
+}
+
+
