@@ -11,6 +11,10 @@ server.get('/', function(req, res){
 	res.render("home_page.jade");
 });
 
+server.get('/home_page.html', function(req, res){
+	res.render("home_page.jade");
+});
+
 server.get('/active_page.html', function(req, res){
 	res.render("active_page.jade");
 });
