@@ -19,17 +19,24 @@ body{
 .homebutton:hover{
 	-webkit-filter: invert(100%);
 }
-.page {
-  border: 1 none;
-  border-radius: 3px;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-  padding: 40px 50px;
-  box-sizing: border-box;
-  width: 80%;
-  margin: 0 10%;
-  position: absolute;
-  background-color: none;
-  background-position: center -146px;
-  background-size: 100vw;
-  font-size: 13px;
+.slides{
+  width:800px;
+  height:350px;
+  overflow:hidden;
+  margin:30px auto;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+.shadow{
+  width:800px;
+  height:350px;
+  overflow:hidden;
+  margin:30px auto;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+.slides img{
+  width:800px;
+  height:350px;
+  display:none;
 }
