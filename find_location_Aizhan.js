@@ -1,10 +1,18 @@
+<<<<<<< HEAD:find_location.js
 var text = document.getElementById("location");
 var lat=0;
 var lon=0;
 
+var x;
+$(document).ready(function() {$('#getzip').click(function(){x=$('#zipbox').val();
+    console.log(x);
+    alert(x);
+    });
+});
+console.log('hello!');
 function getLocation() {
     if (navigator.geolocation) {
-        console.log('in getLocation');
+    	console.log('in getLocation');
         navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else { 
         text.innerHTML = "Geolocation is not supported by this browser. Please enter zip code.";
@@ -12,11 +20,12 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    console.log('in showPosition');
+	console.log('in showPosition');
     text.innerHTML = "Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude;
     lat=position.coords.latitude;
-    lon=position.coords.longitude;  
+    lon=position.coords.longitude;	
+    //console.log(x);
 }
 
 function showError(error) {
@@ -45,19 +54,18 @@ function showError(error) {
 }
 */
 
-// function findAttractions(latitude, longitude) {
-//     var Factual = require('./node_modules/factual-api');
-//     var factual = new Factual('H6KtP8gAGRVJeHaiEukjKiMG16jv3edcYNqhwIFB', 'AUH3r8blzToAgObnpkpoJF4AUiZi4ZmKR9PB6SHd');
+function findAttractions(latitude, longitude) {
+	var Factual = require('./node_modules/factual-api');
+	var factual = new Factual('H6KtP8gAGRVJeHaiEukjKiMG16jv3edcYNqhwIFB', 'AUH3r8blzToAgObnpkpoJF4AUiZi4ZmKR9PB6SHd');
 
-//     var coffeeShops = factual.get('/t/places-us', {q:"coffee", geo:{"$circle":{"$center":[latitude, longitude],"$meters":1000}}}, function (error, res) {
-//     console.log(res.data);
-//     }); 
-// }
-
-//main function
-function getCoordinates() {
-    getLocation();
-    return [lat, lon];
+	var coffeeShops = factual.get('/t/places-us', {q:"coffee", geo:{"$circle":{"$center":[latitude, longitude],"$meters":1000}}}, function (error, res) {
+  	console.log(res.data);
+	});	
 }
 
-exports.getCoordinates = getCoordinates; //public function
+function getCoordinates() {
+	getLocation();
+	return [lat, lon];
+}
+getLocation();
+//exports.getCoordinates=getCoordinates;
