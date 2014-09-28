@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </head>
     <body>
-      <form>
-        Zip Code: <input type="text" name="zipcode"><br>
-      </form>
+      Zip Code: <input id="zipbox" type="text" name="zipcode"><br>
+      <button id="getzip">Submit</button>
+
       <p id="location">Looking for your coordinates...</p>
       <title>Entrtain Me</title>
       <!--<script src="node_modules/factual-api" />-->
       <script src="find_location.js"></script>
     </body>
-  </head>
 </html>
