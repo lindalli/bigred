@@ -58,3 +58,4 @@ function getCoordinates() {
     getLocation();
     return [lat, lon];
 }
+

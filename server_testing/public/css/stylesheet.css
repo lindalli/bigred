@@ -1,0 +1,26 @@
+body{
+  background: -o-linear-gradient(top, #131313, #cb60b3); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(top, #131313, #cb60b3); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(top, #131313, #cb60b3); /* Standard syntax */
+  background: -webkit-linear-gradient(top, #131313, #cb60b3); /* For Safari 5.1 to 6.0 */
+  background-repeat: no repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+#banner{
+  position: center;
+  padding-top: 10px;
+  width: 700px;
+  height: 100px;
+}
+#banner:hover{
+  text-shadow: 2px 2px #000000;
+}
+.homebutton{
+  position: relative;
+  top: 50px;
+  display: inline-block;
+}
+.homebutton:hover{
+  -webkit-filter: invert(100%);
+}
