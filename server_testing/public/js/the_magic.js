@@ -14,14 +14,10 @@ var SPECIAL = "special";
 
 var BUTTON_LIST = [FOOD, MUSIC, NIGHTLIFE, MOVIES, STAY, SHOP, ACTIVE, ATTRACTIONS, SPECIAL];
 
-Array.prototype.foreach = function(f) {
-    for (var i = 0; i < this.length; ++i) {
-        f(this[i]);
-    }
-};
 
 var makeHomeButtons = function()
 {
+    console.log('making buttons');
 	var d = document.createElement("DIV");
 	d.setAttribute("id", "buttondiv");
 	document.body.appendChild(d);
@@ -33,7 +29,7 @@ var makeHomeButtons = function()
 		button.setAttribute("class", "btn btn-default btn-lg active");
 		button.setAttribute("role", "button");
 		var img = document.createElement("IMG");
-		img.src = "data/" + BUTTON_LIST[i] + ".png";
+		img.src = "/data/" + BUTTON_LIST[i] + ".png";
 		button.setAttribute("class", "homebutton");
 		button.appendChild(img);
 		document.getElementById("buttondiv").appendChild(button);

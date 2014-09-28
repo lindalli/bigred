@@ -11,40 +11,40 @@ server.get('/', function(req, res){
 	res.render("home_page.jade");
 });
 
-server.get('/active', function(req, res){
+server.get('/active_page.html', function(req, res){
 	res.render("active_page.jade");
 });
 
-server.get('/attractions', function(req, res){
+server.get('/attractions_page.html', function(req, res){
 	res.render("attractions_page.jade");
 });
 
-server.get('/concerts', function(req, res){
+server.get('/concerts_page.html', function(req, res){
 	res.render("concerts_page.jade");
 });
 
-server.get('/food', function(req, res){
+server.get('/food_page.html', function(req, res){
 	res.render("food_page.jade");
 });
 
-server.get('/movies', function(req, res){
+server.get('/movies_page.html', function(req, res){
 	res.render("movies_page.jade");
 });
 
-server.get('/nightlife', function(req, res){
+server.get('/nightlife_page.html', function(req, res){
 	res.render("nightlife_page.jade");
 });
 
-server.get('/shopping', function(req, res){
+server.get('/shopping_page.html', function(req, res){
 	res.render("shopping_page.jade");
 });
 
-server.get('/special', function(req, res){
+server.get('/special_page.html', function(req, res){
 	res.render("special_page.jade");
 });
 
-server.get('/stayingin', function(req, res){
-	res.render("stayingig_page.jade");
+server.get('/stayingin_page.html', function(req, res){
+	res.render("stayingin_page.jade");
 });
 
 server.listen(1337, '127.0.0.1');
