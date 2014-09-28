@@ -2,6 +2,13 @@ var text = document.getElementById("location");
 var lat=0;
 var lon=0;
 
+var x;
+$(document).ready(function() {$('#getzip').click(function(){x=$('#zipbox').val();
+    console.log(x);
+    alert(x);
+    });
+});
+console.log('hello!');
 function getLocation() {
     if (navigator.geolocation) {
     	console.log('in getLocation');
@@ -17,6 +24,7 @@ function showPosition(position) {
     "<br>Longitude: " + position.coords.longitude;
     lat=position.coords.latitude;
     lon=position.coords.longitude;	
+    //console.log(x);
 }
 
 function showError(error) {
@@ -58,5 +66,7 @@ function getCoordinates() {
 	getLocation();
 	return [lat, lon];
 }
+getLocation();
+//exports.getCoordinates=getCoordinates;
 
 
