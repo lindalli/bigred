@@ -1,3 +1,4 @@
+<<<<<<< HEAD:find_location.js
 var text = document.getElementById("location");
 var lat=0;
 var lon=0;
@@ -68,5 +69,3 @@ function getCoordinates() {
 }
 getLocation();
 //exports.getCoordinates=getCoordinates;
-
-
