@@ -19,24 +19,11 @@ body{
 .homebutton:hover{
 	-webkit-filter: invert(100%);
 }
-.slides{
+#slides{
   width:800px;
-  height:350px;
-  overflow:hidden;
+  height:450px;
   margin:30px auto;
   background-repeat:no-repeat;
   background-position:center;
-}
-.shadow{
-  width:800px;
-  height:350px;
-  overflow:hidden;
-  margin:30px auto;
-  background-repeat:no-repeat;
-  background-position:center;
-}
-.slides img{
-  width:800px;
-  height:350px;
-  display:none;
+  padding-top: 100px;
 }
