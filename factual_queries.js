@@ -2,7 +2,7 @@
 
 */
 
-var lat_long_func = require('find_location'); ///this line might give PROBLEMS?..
+var lat_long_func = require('find_location'); ///this line might give PROBLEMS?.. maybe use find_location_Aizhan
 var lat = lat_long_func.getCoordinates().[0];
 var lon = lat_long_func.getCoordinates().[1];
 
